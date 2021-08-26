@@ -5675,7 +5675,7 @@ ig.module("game.entities.game-control")
             isCoinRainStart: 0,
             CollectedWizardMoveLeft: function () {
                 if (MJS.view.viewport.orientation.portrait) {
-                    this.cartX -= 1.5;
+                    this.cartX -= 1.5 + this.masterSpeed;
                     //this.wizardWareHouseX -= 0.8;
                     if (this.cartX <= 140) {
                         //this.isCoinRainStart = 1;
@@ -5692,7 +5692,7 @@ ig.module("game.entities.game-control")
 
                     }
                 } else {
-                    this.cartXLand -= 1.5;
+                    this.cartXLand -= 1.5 + this.masterSpeed;
                     //this.wizardWareHouseX -= 0.8;
                     if (this.cartXLand <= 268) {
                         //this.isCoinRainStart = 1;
@@ -5839,7 +5839,7 @@ ig.module("game.entities.game-control")
             isGameOver: 0,
             CollectedWizardMoveRight: function () {
                 if (MJS.view.viewport.orientation.portrait) {
-                    this.cartX += 1.5;
+                    this.cartX += 1.5 + this.masterSpeed;
                     //this.wizardWareHouseX += 0.8;
                     if (this.cartX >= 330) {
 
@@ -5851,7 +5851,7 @@ ig.module("game.entities.game-control")
                         this.clickcounter = 5;
                     }
                 } else {
-                    this.cartXLand += 1.5;
+                    this.cartXLand += 1.5 + this.masterSpeed;
                     //this.wizardWareHouseX += 0.8;
                     if (this.cartXLand >= 610) {
 
@@ -6388,16 +6388,17 @@ ig.module("game.entities.game-control")
             },
 
             isCoinPileCanShow: 0,
+            masterSpeed: 1,
             DragonMoveLeft: function () {
                 if (MJS.view.viewport.orientation.portrait) {
-                    this.earthDragonX -= 1.3;
+                    this.earthDragonX -= 1.3 + this.masterSpeed;
                     if (this.earthDragonX <= 170) {
                         this.isDragonLeft = 0;
                         this.isDragonRight = 1;
                         this.isCoinPileCanShow = 1;
                     }
                 } else {
-                    this.earthDragonXLand -= 1.3;
+                    this.earthDragonXLand -= 1.3 + this.masterSpeed;
                     if (this.earthDragonXLand <= 300) {
                         this.isDragonLeft = 0;
                         this.isDragonRight = 1;
@@ -6408,12 +6409,12 @@ ig.module("game.entities.game-control")
             },
             DragonMoveRight: function () {
                 if (MJS.view.viewport.orientation.portrait) {
-                    this.earthDragonX += 1.3;
+                    this.earthDragonX += 1.3 + this.masterSpeed;
                     if (this.earthDragonX >= 300) {
                         this.isDragonRight = 0;
                     }
                 } else {
-                    this.earthDragonXLand += 1.3;
+                    this.earthDragonXLand += 1.3 + this.masterSpeed;
                     if (this.earthDragonXLand >= 560) {
                         this.isDragonRight = 0;
                     }
@@ -6460,9 +6461,9 @@ ig.module("game.entities.game-control")
             isElevatorCoinPileCanShow: 0,
             DownElevator: function () {
                 if (MJS.view.viewport.orientation.portrait) {
-                    this.elevatorY += 1.5;
-                    this.elevatorWizard += 1.5;
-                    this.elevatorCoinPileY += 1.5;
+                    this.elevatorY += 1.5 + this.masterSpeed;
+                    this.elevatorWizard += 1.5 + this.masterSpeed;
+                    this.elevatorCoinPileY += 1.5 + this.masterSpeed;
                     if (this.elevatorY >= 580) {
                         this.isDownElevator = 0;
                         this.ElevatorCoinAnimationWithTween();
@@ -6476,9 +6477,9 @@ ig.module("game.entities.game-control")
                     }
                 }
                 else {
-                    this.elevatorYLand += 1.5;
-                    this.elevatorWizardLand += 1.5;
-                    this.elevatorCoinPileYLand += 1.5;
+                    this.elevatorYLand += 1.5 + this.masterSpeed;
+                    this.elevatorWizardLand += 1.5 + this.masterSpeed;
+                    this.elevatorCoinPileYLand += 1.5 + this.masterSpeed;
                     if (this.elevatorYLand >= 310) {
                         this.isDownElevator = 0;
                         this.ElevatorCoinAnimationWithTween();
@@ -6774,9 +6775,9 @@ ig.module("game.entities.game-control")
             isUpElevatorComplete: 0,
             UpElevator: function () {
                 if (MJS.view.viewport.orientation.portrait) {
-                    this.elevatorY -= 1.5;
-                    this.elevatorWizard -= 1.5;
-                    this.elevatorCoinPileY -= 1.5;
+                    this.elevatorY -= 1.5 + this.masterSpeed;
+                    this.elevatorWizard -= 1.5 + this.masterSpeed;
+                    this.elevatorCoinPileY -= 1.5 + this.masterSpeed;
                     if (this.elevatorY <= 300) {
                         this.elevatorTotalCoin = 0;
                         this.isUpElevator = 0;
@@ -6785,9 +6786,9 @@ ig.module("game.entities.game-control")
                         this.isCoinStackShow = 1;
                     }
                 } else {
-                    this.elevatorYLand -= 1.5;
-                    this.elevatorWizardLand -= 1.5;
-                    this.elevatorCoinPileYLand -= 1.5;
+                    this.elevatorYLand -= 1.5 + this.masterSpeed;
+                    this.elevatorWizardLand -= 1.5 + this.masterSpeed;
+                    this.elevatorCoinPileYLand -= 1.5 + this.masterSpeed;
                     if (this.elevatorYLand <= 140) {
                         this.elevatorTotalCoin = 0;
                         this.isUpElevator = 0;
