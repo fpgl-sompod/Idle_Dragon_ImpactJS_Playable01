@@ -4432,7 +4432,7 @@ ig.module("game.entities.game-control")
                     b.fillStyle = "#FFFFFF";
                     b.font = "bold 34px Arial";
                     b.textAlign = "center";
-                    b.translate(145, 48);
+                    b.translate(145, 47);
                     b.lineWidth = 3;
                     b.fillText(this.totalCoin, 150, 0);
                     b.restore();
@@ -5154,7 +5154,7 @@ ig.module("game.entities.game-control")
                 if (MJS.view.viewport.orientation.portrait) {
                     var b = ig.system.context;
                     b.save();
-                    b.translate(this.earthDragonX + this.imageEarthDragon.width * 0.15 / 2, 565 + this.imageEarthDragon.height * 0.15);
+                    b.translate(this.earthDragonX + this.imageEarthDragon.width * 0.15 / 2, 570 + this.imageEarthDragon.height * 0.15);
                     b.scale(0.15 * this.scaleMonster1.x, 0.15 * this.scaleMonster1.y);
                     if (this.isDragonLeft == 1) {
                         this.imageEarthDragon.draw(-this.imageEarthDragon.width / 2, -this.imageEarthDragon.height);
@@ -5883,7 +5883,7 @@ ig.module("game.entities.game-control")
                     this.singleCoin21X = 360;
                     this.singleCoin21Y = 290;
                     //coin 0
-                    this.tween({ singleCoin16Y: 12, singleCoin16X: 187 }, 1, {
+                    this.tween({ singleCoin16Y: 12, singleCoin16X: 187 }, 1 - this.masterCoinMoveSpeed, {
                         easing: ig.Tween.Easing.Back.EaseIn,
                         onComplete: function () {
 
@@ -5892,7 +5892,7 @@ ig.module("game.entities.game-control")
                     //coin 0        
                     setTimeout(() => {
                         //coin 1
-                        this.tween({ singleCoin17Y: 12, singleCoin17X: 187 }, 1, {
+                        this.tween({ singleCoin17Y: 12, singleCoin17X: 187 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
 
@@ -5903,7 +5903,7 @@ ig.module("game.entities.game-control")
 
                     setTimeout(() => {
                         //coin 2
-                        this.tween({ singleCoin18Y: 12, singleCoin18X: 187 }, 1, {
+                        this.tween({ singleCoin18Y: 12, singleCoin18X: 187 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
 
@@ -5914,7 +5914,7 @@ ig.module("game.entities.game-control")
 
                     setTimeout(() => {
                         //coin 3
-                        this.tween({ singleCoin19Y: 12, singleCoin19X: 187 }, 1, {
+                        this.tween({ singleCoin19Y: 12, singleCoin19X: 187 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
 
@@ -5925,7 +5925,7 @@ ig.module("game.entities.game-control")
 
                     setTimeout(() => {
                         //coin 4
-                        this.tween({ singleCoin20Y: 12, singleCoin20X: 187 }, 1, {
+                        this.tween({ singleCoin20Y: 12, singleCoin20X: 187 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
 
@@ -5936,7 +5936,7 @@ ig.module("game.entities.game-control")
 
                     setTimeout(() => {
                         //coin 5
-                        this.tween({ singleCoin21Y: 12, singleCoin21X: 187 }, 1, {
+                        this.tween({ singleCoin21Y: 12, singleCoin21X: 187 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
                                 this.totalCoin = "2000";
@@ -5962,7 +5962,7 @@ ig.module("game.entities.game-control")
                     this.singleCoin21X = 360 + this.CTAX;
                     this.singleCoin21Y = 290 - this.CTAY;
                     //coin 0
-                    this.tween({ singleCoin16Y: 5, singleCoin16X: 390}, 1, {
+                    this.tween({ singleCoin16Y: 5, singleCoin16X: 390 }, 1 - this.masterCoinMoveSpeed, {
                         easing: ig.Tween.Easing.Back.EaseIn,
                         onComplete: function () {
 
@@ -5971,7 +5971,7 @@ ig.module("game.entities.game-control")
                     //coin 0        
                     setTimeout(() => {
                         //coin 1
-                        this.tween({ singleCoin17Y: 5, singleCoin17X: 390}, 1, {
+                        this.tween({ singleCoin17Y: 5, singleCoin17X: 390 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
 
@@ -5982,7 +5982,7 @@ ig.module("game.entities.game-control")
 
                     setTimeout(() => {
                         //coin 2
-                        this.tween({ singleCoin18Y: 5, singleCoin18X: 390}, 1, {
+                        this.tween({ singleCoin18Y: 5, singleCoin18X: 390 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
 
@@ -5993,7 +5993,7 @@ ig.module("game.entities.game-control")
 
                     setTimeout(() => {
                         //coin 3
-                        this.tween({ singleCoin19Y: 5, singleCoin19X: 390}, 1, {
+                        this.tween({ singleCoin19Y: 5, singleCoin19X: 390 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
 
@@ -6004,7 +6004,7 @@ ig.module("game.entities.game-control")
 
                     setTimeout(() => {
                         //coin 4
-                        this.tween({ singleCoin20Y: 5, singleCoin20X: 390}, 1, {
+                        this.tween({ singleCoin20Y: 5, singleCoin20X: 390 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
 
@@ -6015,7 +6015,7 @@ ig.module("game.entities.game-control")
 
                     setTimeout(() => {
                         //coin 5
-                        this.tween({ singleCoin21Y: 5, singleCoin21X: 390}, 1, {
+                        this.tween({ singleCoin21Y: 5, singleCoin21X: 390 }, 1 - this.masterCoinMoveSpeed, {
                             easing: ig.Tween.Easing.Back.EaseIn,
                             onComplete: function () {
                                 this.totalCoin = "2000";
@@ -6110,6 +6110,7 @@ ig.module("game.entities.game-control")
             },
             EDX: 230,
             EDY: 330,
+            masterCoinMoveSpeed: 0.2,
             DragonCoinAnimationWithTween: function () { // this method for animation coin of dragon.
                 if (MJS.view.viewport.orientation.portrait) {
                     this.singleCoin0X = 480;
@@ -6124,9 +6125,9 @@ ig.module("game.entities.game-control")
                     this.singleCoin4Y = 690;
                     this.isDragonCoinAnimShowing = 1;
                     //coin0 animation start
-                    this.tween({ singleCoin0Y: 600 }, 0.3, {
+                    this.tween({ singleCoin0Y: 600 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin0Y: 650 }, 0.3, {
+                            this.tween({ singleCoin0Y: 650 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6134,7 +6135,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin0X: 400 }, 0.5, {
+                    this.tween({ singleCoin0X: 400 }, 0.5 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6149,9 +6150,9 @@ ig.module("game.entities.game-control")
                     //coin0 animation end  
 
                     //coin1 animation start
-                    this.tween({ singleCoin1Y: 580 }, 0.5, {
+                    this.tween({ singleCoin1Y: 580 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin1Y: 650 }, 0.5, {
+                            this.tween({ singleCoin1Y: 650 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6159,7 +6160,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin1X: 390 }, 1, {
+                    this.tween({ singleCoin1X: 390 }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6174,9 +6175,9 @@ ig.module("game.entities.game-control")
                     //coin1 animation end     
 
                     //coin2 animation start
-                    this.tween({ singleCoin2Y: 600 }, 0.5, {
+                    this.tween({ singleCoin2Y: 600 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin2Y: 650 }, 0.5, {
+                            this.tween({ singleCoin2Y: 650 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6184,7 +6185,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin2X: 410 }, 1, {
+                    this.tween({ singleCoin2X: 410 }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6199,9 +6200,9 @@ ig.module("game.entities.game-control")
                     //coin2 animation end      
 
                     //coin3 animation start
-                    this.tween({ singleCoin3Y: 600 }, 0.5, {
+                    this.tween({ singleCoin3Y: 600 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin3Y: 650 }, 0.5, {
+                            this.tween({ singleCoin3Y: 650 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6209,7 +6210,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin3X: 380 }, 1, {
+                    this.tween({ singleCoin3X: 380 }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6225,9 +6226,9 @@ ig.module("game.entities.game-control")
 
 
                     //coin4 animation start
-                    this.tween({ singleCoin4Y: 600 }, 0.5, {
+                    this.tween({ singleCoin4Y: 600 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin4Y: 650 }, 0.5, {
+                            this.tween({ singleCoin4Y: 650 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6235,7 +6236,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin4X: 360 }, 1, {
+                    this.tween({ singleCoin4X: 360 }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6260,9 +6261,9 @@ ig.module("game.entities.game-control")
                     this.singleCoin4Y = 690 - this.EDY;
                     this.isDragonCoinAnimShowing = 1;
                     //coin0 animation start
-                    this.tween({ singleCoin0Y: 600 - this.EDY}, 0.3, {
+                    this.tween({ singleCoin0Y: 600 - this.EDY }, 0.3 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin0Y: 650 - this.EDY}, 0.3, {
+                            this.tween({ singleCoin0Y: 650 - this.EDY }, 0.3 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6270,7 +6271,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin0X: 400 + this.EDX}, 0.5, {
+                    this.tween({ singleCoin0X: 400 + this.EDX }, 0.5 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6285,9 +6286,9 @@ ig.module("game.entities.game-control")
                     //coin0 animation end  
 
                     //coin1 animation start
-                    this.tween({ singleCoin1Y: 580 - this.EDY}, 0.5, {
+                    this.tween({ singleCoin1Y: 580 - this.EDY }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin1Y: 650 - this.EDY}, 0.5, {
+                            this.tween({ singleCoin1Y: 650 - this.EDY }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6295,7 +6296,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin1X: 390 + this.EDX}, 1, {
+                    this.tween({ singleCoin1X: 390 + this.EDX }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6310,9 +6311,9 @@ ig.module("game.entities.game-control")
                     //coin1 animation end     
 
                     //coin2 animation start
-                    this.tween({ singleCoin2Y: 600 - this.EDY}, 0.5, {
+                    this.tween({ singleCoin2Y: 600 - this.EDY }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin2Y: 650 - this.EDY}, 0.5, {
+                            this.tween({ singleCoin2Y: 650 - this.EDY }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6320,7 +6321,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin2X: 410 + this.EDX}, 1, {
+                    this.tween({ singleCoin2X: 410 + this.EDX }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6335,9 +6336,9 @@ ig.module("game.entities.game-control")
                     //coin2 animation end      
 
                     //coin3 animation start
-                    this.tween({ singleCoin3Y: 600 - this.EDY}, 0.5, {
+                    this.tween({ singleCoin3Y: 600 - this.EDY }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin3Y: 650 - this.EDY}, 0.5, {
+                            this.tween({ singleCoin3Y: 650 - this.EDY }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6345,7 +6346,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin3X: 380 + this.EDX}, 1, {
+                    this.tween({ singleCoin3X: 380 + this.EDX }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6361,9 +6362,9 @@ ig.module("game.entities.game-control")
 
 
                     //coin4 animation start
-                    this.tween({ singleCoin4Y: 600 - this.EDY}, 0.5, {
+                    this.tween({ singleCoin4Y: 600 - this.EDY }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin4Y: 650 - this.EDY}, 0.5, {
+                            this.tween({ singleCoin4Y: 650 - this.EDY }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6371,7 +6372,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin4X: 360 + this.EDX}, 1, {
+                    this.tween({ singleCoin4X: 360 + this.EDX }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6388,7 +6389,7 @@ ig.module("game.entities.game-control")
             },
 
             isCoinPileCanShow: 0,
-            masterSpeed: 1,
+            masterSpeed: 3,
             DragonMoveLeft: function () {
                 if (MJS.view.viewport.orientation.portrait) {
                     this.earthDragonX -= 1.3 + this.masterSpeed;
@@ -6511,9 +6512,9 @@ ig.module("game.entities.game-control")
                     this.singleCoin9Y = 690;
                     this.isElevatorCoinAnimShowing = 1;
                     //coin0 animation start
-                    this.tween({ singleCoin5Y: 600 }, 0.3, {
+                    this.tween({ singleCoin5Y: 600 }, 0.3 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin5Y: 665 }, 0.3, {
+                            this.tween({ singleCoin5Y: 665 }, 0.3 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6521,7 +6522,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin5X: 100 }, 0.5, {
+                    this.tween({ singleCoin5X: 100 }, 0.5 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6536,9 +6537,9 @@ ig.module("game.entities.game-control")
                     //coin0 animation end  
 
                     //coin1 animation start
-                    this.tween({ singleCoin6Y: 600 }, 0.5, {
+                    this.tween({ singleCoin6Y: 600 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin6Y: 655 }, 0.5, {
+                            this.tween({ singleCoin6Y: 655 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6546,7 +6547,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin6X: 80 }, 1, {
+                    this.tween({ singleCoin6X: 80 }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6561,9 +6562,9 @@ ig.module("game.entities.game-control")
                     //coin1 animation end     
 
                     //coin2 animation start
-                    this.tween({ singleCoin7Y: 600 }, 0.5, {
+                    this.tween({ singleCoin7Y: 600 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin7Y: 660 }, 0.5, {
+                            this.tween({ singleCoin7Y: 660 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6586,9 +6587,9 @@ ig.module("game.entities.game-control")
                     //coin2 animation end      
 
                     //coin3 animation start
-                    this.tween({ singleCoin8Y: 600 }, 0.5, {
+                    this.tween({ singleCoin8Y: 600 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin8Y: 650 }, 0.5, {
+                            this.tween({ singleCoin8Y: 650 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6596,7 +6597,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin8X: 110 }, 1, {
+                    this.tween({ singleCoin8X: 110 }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6612,9 +6613,9 @@ ig.module("game.entities.game-control")
 
 
                     //coin4 animation start
-                    this.tween({ singleCoin9Y: 600 }, 0.5, {
+                    this.tween({ singleCoin9Y: 600 }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin9Y: 640 }, 0.5, {
+                            this.tween({ singleCoin9Y: 640 }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6622,7 +6623,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin9X: 120 }, 1, {
+                    this.tween({ singleCoin9X: 120 }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6645,9 +6646,9 @@ ig.module("game.entities.game-control")
                     this.singleCoin9Y = 690 - this.ECAY;
                     this.isElevatorCoinAnimShowing = 1;
                     //coin0 animation start
-                    this.tween({ singleCoin5Y: 600 - this.ECAY}, 0.3, {
+                    this.tween({ singleCoin5Y: 600 - this.ECAY }, 0.3 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin5Y: 665 - this.ECAY}, 0.3, {
+                            this.tween({ singleCoin5Y: 665 - this.ECAY }, 0.3 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6655,7 +6656,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin5X: 100 + this.ECAX}, 0.5, {
+                    this.tween({ singleCoin5X: 100 + this.ECAX }, 0.5 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6670,9 +6671,9 @@ ig.module("game.entities.game-control")
                     //coin0 animation end  
 
                     //coin1 animation start
-                    this.tween({ singleCoin6Y: 600 - this.ECAY}, 0.5, {
+                    this.tween({ singleCoin6Y: 600 - this.ECAY }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin6Y: 655 - this.ECAY}, 0.5, {
+                            this.tween({ singleCoin6Y: 655 - this.ECAY }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6680,7 +6681,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin6X: 80 + this.ECAX}, 1, {
+                    this.tween({ singleCoin6X: 80 + this.ECAX }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6695,9 +6696,9 @@ ig.module("game.entities.game-control")
                     //coin1 animation end     
 
                     //coin2 animation start
-                    this.tween({ singleCoin7Y: 600 - this.ECAY}, 0.5, {
+                    this.tween({ singleCoin7Y: 600 - this.ECAY }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin7Y: 660 - this.ECAY}, 0.5, {
+                            this.tween({ singleCoin7Y: 660 - this.ECAY }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6705,7 +6706,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin7X: 90 + this.ECAX}, 1, {
+                    this.tween({ singleCoin7X: 90 + this.ECAX }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6720,9 +6721,9 @@ ig.module("game.entities.game-control")
                     //coin2 animation end      
 
                     //coin3 animation start
-                    this.tween({ singleCoin8Y: 600 - this.ECAY}, 0.5, {
+                    this.tween({ singleCoin8Y: 600 - this.ECAY }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin8Y: 650 - this.ECAY}, 0.5, {
+                            this.tween({ singleCoin8Y: 650 - this.ECAY }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6730,7 +6731,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin8X: 110 + this.ECAX}, 1, {
+                    this.tween({ singleCoin8X: 110 + this.ECAX }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
@@ -6746,9 +6747,9 @@ ig.module("game.entities.game-control")
 
 
                     //coin4 animation start
-                    this.tween({ singleCoin9Y: 600 - this.ECAY}, 0.5, {
+                    this.tween({ singleCoin9Y: 600 - this.ECAY }, 0.5 - this.masterCoinMoveSpeed, {
                         onComplete: function () {
-                            this.tween({ singleCoin9Y: 640 - this.ECAY}, 0.5, {
+                            this.tween({ singleCoin9Y: 640 - this.ECAY }, 0.5 - this.masterCoinMoveSpeed, {
                                 onComplete: function () {
 
                                 }.bind(this)
@@ -6756,7 +6757,7 @@ ig.module("game.entities.game-control")
                         }.bind(this)
                     }).start();
 
-                    this.tween({ singleCoin9X: 120 + this.ECAX}, 1, {
+                    this.tween({ singleCoin9X: 120 + this.ECAX }, 1 - this.masterCoinMoveSpeed, {
                         //easing: ig.Tween.Easing.Back.EaseOut,
                         //loop: ig.Tween.Loop.Reverse,
                         onComplete: function () {
